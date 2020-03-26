@@ -7,8 +7,7 @@
     
     include(HTML_DIR . 'header.inc.php');
     
-    include(LIB_BACKEND_DIR . '/processing/pl/random_number.php');
-        
+    include(LIB_BACKEND_DIR . '/processing/pl/random_number.php');        
 ?>
 
     <!-- Page Content -->
