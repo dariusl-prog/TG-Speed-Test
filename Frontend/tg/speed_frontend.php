@@ -2,6 +2,10 @@
 	require_once($_SERVER['DOCUMENT_ROOT'] . '/paths.php');
 	
 	require_once(LIB_BACKEND_DIR . '/processing/bl/speed.bl.php');
+    
+    $includeJS_frontend = 'y';
+    
+    $includeJS_Random_Index = 'n';
 	
 	include(HTML_DIR . 'header.inc.php');
 ?>
@@ -17,7 +21,7 @@
   			<p>Loops : <?php echo $iLoops ?></p>
   		  		
   			<div style="text-align: center;">
-				<input type="button" id="but_rerun" class="button1" value="Re-Run" />
+				<input type="button" class="button1" id="but_rerun"  value="Re-Run" />
         		<input type="button" class="button1" id="but_back" value="Back" >	
 				</button>
 			</div>

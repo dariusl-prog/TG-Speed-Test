@@ -1,7 +1,14 @@
 <?php
 	require_once($_SERVER['DOCUMENT_ROOT'] . '/paths.php');
     
+    $includeJS_Random_Index = 'y';
+    
+    $includeJS_frontend = 'n';
+    
     include(HTML_DIR . 'header.inc.php');
+    
+    include(LIB_BACKEND_DIR . '/processing/pl/random_number.php');
+        
 ?>
 
     <!-- Page Content -->
@@ -11,9 +18,13 @@
             <div id="search-section">
               	<form name="input_form" method="post" action="speed_frontend.php">
                     <div>                 
-                        <input type="number" class="loops-bar" name="loop" placeholder="Amount...">                 
+                        <input type="number" class="loops-bar" name="loop" placeholder="Amount..." >                 
                     </div>
-                        <input type="submit" class="button1" value="Run">
+                        <input type="submit" class="button1" value="Run" >               
+                </form>
+                <form name="random_button" method="post" action="speed_frontend.php">
+                    <input type="hidden" class="button1" value="<?php echo $random_loops ?>" name="loop" >
+                    <input type="submit" class="button1" id="but_fill" value="Random" >
                 </form>
             </div>
     </div>

@@ -17,9 +17,23 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="lib/css/home.css">
     <!-- <link rel="stylesheet" href="assets/css/fontawesome.css"> -->
-    <script type="text/javascript" src="<?php echo WIDGETS_DIR; ?>jQuery/jQuery.min.js"></script>
-    <script type="text/javascript" src="<?php echo JS_DIR; ?>masterArray.js"></script>
-    <script type="text/javascript" src="<?php echo JS_DIR; ?>speed_frontend.js"></script>
+    <!-- JS to include  -->
+    <?php
+        if ('y' == $includeJS_frontend) 
+        {
+            echo '<script type="text/javascript" src="' . WIDGETS_DIR . 'jQuery/jQuery.min.js"></script>';
+            echo '<script type="text/javascript" src="' . JS_DIR . 'masterArray.js"></script>';
+            echo '<script type="text/javascript" src="' . JS_DIR . 'speed_frontend.js"></script>';
+        }
+    ?>
+        
+    <?php
+        if ('y' == $includeJS_Random_Index) 
+        {
+            echo '<script type="text/javascript" src="' . JS_DIR . 'Random_Number.js"></script>';  
+        }
+    ?>
+    
     
 
 
