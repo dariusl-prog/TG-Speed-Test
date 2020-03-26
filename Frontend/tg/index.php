@@ -21,10 +21,12 @@
                     </div>
                         <input type="submit" class="button1" value="Run" >               
                 </form>
-                <form name="random_button" method="post" action="speed_frontend.php">
-                    <input type="hidden" class="button1" value="<?php echo $random_loops ?>" name="loop" >
-                    <input type="submit" class="button1" id="but_fill" value="Random" >
-                </form>
+                <div class="Random">
+                    <form name="random_button" method="post" action="speed_frontend.php">
+                        <input type="hidden" value="<?php echo $random_loops ?>" name="loop" >
+                        <input type="submit" class="button2" id="but_fill" value="Random" >
+                    </form>
+                </div>                
             </div>
     </div>
         <?php
